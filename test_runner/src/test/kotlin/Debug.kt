@@ -31,3 +31,24 @@ fun main() {
         )
     }
 }
+fun main() {
+    // GoogleApiLogger.logAllToStdout()
+
+    // for debugging. Run test from IntelliJ IDEA
+
+    // run "gradle check" to generate required fixtures
+//    val projectId = System.getenv("GOOGLE_CLOUD_PROJECT")
+//        ?: "YOUR PROJECT ID"
+//    val quantity = "single"
+//    val type = "robo"
+
+    // Bugsnag keeps the process alive so we must call exitProcess
+    // https://github.com/bugsnag/bugsnag-java/issues/151
+    withGlobalExceptionHandling {
+        CommandLine(Main()).execute(
+            "hypershard",
+            "android",
+            "--dirs=/Users/gogo/flank/test_runner/src/test/kotlin"
+        )
+    }
+}

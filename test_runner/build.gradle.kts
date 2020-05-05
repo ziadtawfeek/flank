@@ -171,7 +171,6 @@ dependencies {
 
     implementation(Libs.DD_PLIST)
     implementation(Libs.DEX_TEST_PARSER)
-
     implementation(Libs.GSON)
 
     implementation(Libs.JACKSON_DATABIND)
@@ -208,10 +207,12 @@ dependencies {
     implementation(Libs.JSOUP)
     implementation(Libs.OKHTTP)
 
+    implementation(Libs.HYPERSHARD_ANDROID)
+
     detektPlugins(Libs.DETEKT_FORMATTING)
 
     testImplementation(Libs.JUNIT)
-    implementation(Libs.SYSTEM_RULES)
+    testImplementation(Libs.SYSTEM_RULES)
     testImplementation(Libs.TRUTH)
     testImplementation(Libs.MOCKK)
 
