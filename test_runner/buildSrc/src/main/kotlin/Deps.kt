@@ -140,7 +140,5 @@ object Libs {
 
     const val COMMON_TEXT = "org.apache.commons:commons-text:${Versions.COMMON_TEXT}"
 
-    //hypershard region
     const val HYPERSHARD_ANDROID = "com.dropbox.mobile.hypershard:hypershard:${Versions.HYPERSHARD_ANDROID}"
-    //endregion
 }
