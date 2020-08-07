@@ -40,18 +40,18 @@ bintray {
     key = System.getenv("JFROG_API_KEY") ?: properties["JFROG_API_KEY"].toString()
     publish = true
     setPublications("mavenJava")
-    pkg(closureOf<BintrayExtension.PackageConfig> {
+    pkg.apply {
         repo = "maven"
         name = "flank"
         userOrg = "flank"
         setLicenses("Apache-2.0")
         vcsUrl = "https://github.com/Flank/flank.git"
-        version(closureOf<BintrayExtension.VersionConfig> {
+        version.apply {
             name = System.getenv("MVN_VERSION")
             vcsTag = System.getenv("MVN_REVISION")
             released = Date().toString()
-        })
-    })
+        }
+    }
 }
 
 java {

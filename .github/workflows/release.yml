@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - 'master'
+      - '#953-bintray-upload-fix'
     tags: v*
 
 jobs:
